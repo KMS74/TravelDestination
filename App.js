@@ -25,7 +25,7 @@ const styles = StyleSheet.create({
     flex: 1,
     resizeMode: "cover",
     justifyContent: "center",
-    backgroundColor: "rgba(255, 255, 255, 0.5)",
+    backgroundColor: "rgba(0, 0, 0, 0.5)",
   },
   container: {
     flex: 1,
