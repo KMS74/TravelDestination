@@ -97,7 +97,20 @@ const GalleryScreen = () => {
   ];
 
   return (
-    <ScrollView contentContainerStyle={styles.galleryContainer}></ScrollView>
+    <ScrollView contentContainerStyle={styles.galleryContainer}>
+      {destinations.map(({ name, image }) => (
+        <View key={name} style={styles.imageContainer}>
+          <Image source={{ uri: image }} style={styles.galleryImage} />
+          <Text style={styles.destinationName}>{name}</Text>
+          <TouchableOpacity
+            style={styles.button}
+            onPress={() => alert("Explore")}
+          >
+            <Text style={styles.buttonText}>Explore</Text>
+          </TouchableOpacity>
+        </View>
+      ))}
+    </ScrollView>
   );
 };
 export default GalleryScreen;
